@@ -1,0 +1,5 @@
+window._CONFIG_ = {  
+    VITE_API_BASE_URL : "http://192.168.29.99:8014",
+    VITE_MEDIA_BASE_URL : "http://192.168.29.99:8114",
+    VITE_ADMIN_PROJECT_URL : "http://192.168.29.99:8114"
+}

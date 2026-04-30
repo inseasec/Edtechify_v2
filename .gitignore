@@ -1,0 +1,20 @@
+# Eclipse / IDE
+/.metadata/
+.qodo/
+
+# Ignore FilesData folder
+/FilesData/
+
+# Ignore all application.properties files anywhere
+**/application.properties
+
+# Ignore env files
+.env
+.env.*
+*.env
+
+# Ignore global config files
+/global-config.properties
+/global-config.properties.bak
+
+#Final testing for git ingore added == dm/ ak
