@@ -98,25 +98,22 @@ public class CareerServiceImpl implements CareersService {
                     career.setResume(resumePath);
                }
 
-               // Video is mandatory for all applications.
-               if (videoFile == null || videoFile.isEmpty()) {
-                    throw new IllegalArgumentException("Intro video is mandatory");
-               }
+              // Video is mandatory for all applications.
+              //  if (videoFile == null || videoFile.isEmpty()) {
+              //       throw new IllegalArgumentException("Intro video is mandatory");
+              //  }
+              
                validateFiles(videoFile, UploadType.VIDEO);
                String videoPath = saveFile(videoFile, comprehensivePath);
                career.setVideo(videoPath);
-         //   if(request.getStatus() == null){
-         //      career.setStatus("APPLIED"); 
-         //     }
 
-      
+            if(request.getStatus() == null){
+                career.setStatus("APPLIED"); 
+              }
 
-            // if(request.getApplyFor() != null){
-            //   ApplyFor applyFor = applyForRepository
-            //                        .findById(request.getApplyFor())
-            //                         .orElseThrow(() -> new RuntimeException("ApplyFor not found"));
+            if(request.getApplyFor() != null){
                 career.setApplyFor(applyFor);
-            //  }
+             }
               
              
          return careersRepository.save(career);                        

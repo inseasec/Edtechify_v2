@@ -187,8 +187,8 @@ export default function CareersAppliedPanel() {
     [allApplicants, filters, nameSortOrder],
   )
 
-  console.log("all applicants",allApplicants)
-  console.log("f",filteredApplicants)
+  // console.log("all applicants",allApplicants)
+  // console.log("f",filteredApplicants)
 
   const total = filteredApplicants.length
 
@@ -289,7 +289,7 @@ export default function CareersAppliedPanel() {
                   </td>
                 </tr>
               )}
-              {allApplicants.map((row, i) => (
+              {filteredApplicants.map((row, i) => (
                 <tr
                   key={applicantKey(row, i)}
                   className="cursor-pointer border-b border-slate-50 hover:bg-slate-50/50"
